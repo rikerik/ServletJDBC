@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    image: jetty:11-jdk21
+    ports:
+      - "8080:8080"
+    volumes:
+       - ./target/jdbc-1.0-SNAPSHOT.war:/var/lib/jetty/webapps/root.war
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://172.17.0.1:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 123
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
