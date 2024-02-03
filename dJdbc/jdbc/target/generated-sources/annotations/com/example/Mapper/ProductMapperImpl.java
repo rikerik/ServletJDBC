@@ -6,8 +6,8 @@ import com.example.Model.Product;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-02T15:45:03+0100",
-    comments = "version: 1.6.0.Beta1, compiler: javac, environment: Java 17.0.6 (Eclipse Adoptium)"
+    date = "2024-02-03T14:02:03+0100",
+    comments = "version: 1.6.0.Beta1, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
 )
 */
 public class ProductMapperImpl implements ProductMapper {
